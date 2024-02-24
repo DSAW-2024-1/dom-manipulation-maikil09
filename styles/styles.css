@@ -19,7 +19,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/assets/images/fondo.jpg');
+    background-image: url('./assets/images/fondo.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -87,7 +87,7 @@ ul li::before{
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background-image:url(/assets/images/incompleto.png);
+    background-image:url('./assets/images/incompleto.png');
     background-size: cover;
     background-position: center;
     top: 12px;
@@ -98,7 +98,7 @@ ul li.completado{
     text-decoration: line-through;
 }
 ul li.completado::before{
-    background-image: url(/assets/images/completado.png);
+    background-image: url('./assets/images/completado.png');
 
 }
 ul li span{
