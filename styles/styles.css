@@ -1,5 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
+    font-family: "Noto Sans", "sans-serif";
     box-sizing: border-box;
 }
+.contenido{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.contenido::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    z-index: -1;
+    opacity: 0.8;
+}
+.encabezado{
+    padding: 1rem;
+}
+h1{
+  border-bottom: 1px solid black;  
+  justify-content: center;
+  font-size: 2.2rem;
+}
+.resumen_tareas{
+    flex-grow: 1;
+    padding: 1rem;
+    
+}
+.añadir_tareas{
+    margin: 0px 4rem;
+    padding: 1rem;
+}
+.caja_añadir{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 20px;
+}
+.input_añadir{
+    flex: 1;
+    padding: 1px 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-weight: 14px;
+}
+.boton_añadir{
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    background: #ff5945;
+    color:#fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid rgb(13, 16, 56);
+    border-radius: 10px;
+    background-color: rgb(95, 133, 158);
+    margin: 2px;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image:url('/assets/incompleto.png');
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.completado{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.completado::before{
+    background-image: url('/assets/completado.png');
+
+}
+ul li span{
+    position: absolute;
+    right: 2px;
+    top: 3px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: rgb(202, 50, 50);   
+}
+@media only screen and (max-width: 768px) {
+    .contenido::before {
+      background-attachment: scroll;
+    }
+    .añadir_tareas {
+      margin: 0px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .encabezado {
+      padding: 0.5rem; 
+    }
+    .añadir_tareas {
+      padding: 0.5rem;
+    }
+  }
+  
+  @media only screen and (max-width: 320px) {
+    .input_añadir {
+      padding: 1px 10px;
+    }
+  }
