@@ -29,5 +29,3 @@ El diseño de la aplicación debe ser responsive y adaptarse correctamente a dif
 | Diseño Responsive | 0.5     |
 | HTML Semántico     | 0.5     |
 | Funcionalidad      | 3       |
-
-## Link pagina web https://dsaw-2024-1.github.io/dom-manipulation-maikil09/
