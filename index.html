@@ -4,10 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <title>Document</title>
+    <link rel="icon" type="image/png"  href="/assets/images/favicon.png">
+    <title>To do </title>
   </head>
   <body>
-    <h1>Mi TODO list</h1>
+    <div class="contenido">
+      <section class="encabezado">
+        <h1>Mi día</h1>
+        <p id="fecha"></p>
+      </section>
+      <section class="resumen_tareas">
+        <ul id="lista_tareas">
+         
+        </ul>
+        
+      </section>
+      <section class="añadir_tareas">
+        <div class="caja_añadir">
+          <input class="input_añadir" id="añadir_tarea" type="text" placeholder="Aqui puedes añadir tus tareas">
+          <button onclick="añadirtarea()" class="boton_añadir">añadir</button>
+        </div>
+      </section>
+    </div>
+    
+    
+
     <script src="scripts/script.js"></script>
   </body>
 </html>
